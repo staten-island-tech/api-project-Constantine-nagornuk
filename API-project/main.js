@@ -8,14 +8,15 @@ import './style.css'
          throw new Error(repsonce.statusText) 
         } 
     const data = await repsonce.json()
-    console.log(data)
-    const poop = data.name
-    console.log(poop)
+    data.results.forEach((info) => console.log(info))
+    data.results.mass.forEach((d) => console.log(d))
+      
    } 
     catch (error){
        error } } 
 
-const poopy = getdata(url)
+ getdata(url)
+ console.log("WHERE IS MY VONSOPLE")
 
 
 
