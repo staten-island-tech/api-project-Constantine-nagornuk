@@ -9,8 +9,9 @@ import './style.css'
         } 
     const data = await repsonce.json()
     data.results.forEach((info) => console.log(info))
-    data.results.mass.forEach((d) => console.log(d))
-      
+    console.log("1")
+    data.results.name.forEach((name) => console.log(name))
+    console.log("2")
    } 
     catch (error){
        error } } 
