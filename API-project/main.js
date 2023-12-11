@@ -24,7 +24,7 @@ import './style.css'
     catch (error){
        error } } 
 
- getdata(page3)
+ getdata(page1)
 
 
 
