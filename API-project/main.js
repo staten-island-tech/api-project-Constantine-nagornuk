@@ -1,6 +1,14 @@
 import './style.css'
 
- const url = "https://swapi.dev/api/people"
+ const page1 = "https://swapi.dev/api/people"
+ const page2 = "https://swapi.dev/api/people/?page=2"
+ const page3 = "https://swapi.dev/api/people/?page=3"
+
+/* mAYBE i cant make all the urls into a list and iterate over it with the async funstion to load all the data at once? */
+
+
+
+
   async function getdata(url) {
      try {
        const repsonce = await fetch(url); 
@@ -8,20 +16,25 @@ import './style.css'
          throw new Error(repsonce.statusText) 
         } 
     const data = await repsonce.json()
+    
     data.results.forEach((info) => console.log(info))
-    console.log("1")
-    data.results.name.forEach((name) => console.log(name))
-    console.log("2")
+    data.results.forEach((name1) => console.log(name1.name))
+   
    } 
     catch (error){
        error } } 
 
- getdata(url)
- console.log("WHERE IS MY VONSOPLE")
+ getdata(page3)
 
 
 
 
 
+
+
+
+
+
+/*  i might poop my self if the code doesnt work*/
 
 
