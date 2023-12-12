@@ -7,8 +7,9 @@ import './style.css'
 /* mAYBE i cant make all the urls into a list and iterate over it with the async funstion to load all the data at once? */
 
 
-
-
+const DOMselectors = {
+  inside: document.getElementById("inside")
+}
   async function getdata(url) {
      try {
        const repsonce = await fetch(url); 
@@ -17,15 +18,37 @@ import './style.css'
         } 
     const data = await repsonce.json()
     
-    data.results.forEach((info) => console.log(info))
-    data.results.forEach((name1) => console.log(name1.name))
-   
+
+   data.results.forEach((info) => console.log(info))
+        
+    data.results.forEach((card)=>  {
+      let x = card.name
+      let y = card.birth_year
+      let z = card.eye_color
+      console.log(x,y,z)
+    })
+
    } 
     catch (error){
        error } } 
 
- getdata(page1)
+ getdata(page3)
+ 
 
+
+
+
+
+/* 
+ <div id="CardFormant" class="CardTemplate">
+      
+        <h2>Name</h2>
+        <p>Gender</p>
+        <p>Height</p>
+        <p>Mass</p>
+        <p>Birth year</p>
+    
+    </div> */
 
 
 
