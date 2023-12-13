@@ -36,18 +36,13 @@ const DOMselectors2 = {
          throw new Error(repsonce.statusText) 
         } 
     const data = await repsonce.json()
-    
-
-   data.results.forEach((info) => console.log(info))
-        
     data.results.forEach((card)=>  {
       let x = card.name
       let y = card.birth_year
       let z = card.eye_color
       let t = card.gender
       const infoholder =  `
-      <div id="CardFormant" class="CardTemplate">
-      
+      <div id="CardFormant" class="CardTemplate">-
         <h2 class="personname">${x}</h2>
         <p>${z}</p>
         <p>${t}</p>
@@ -57,16 +52,12 @@ const DOMselectors2 = {
     </div> 
 `
 DOMselectors.inside.insertAdjacentHTML('beforeend' , infoholder)
-      
     })
-
    } 
     catch (error){
        error } } 
 
  getdata(page6)
- 
-
 
 
 DOMselectors2.forEach((Selector) => {Selector.addEventListener("click" , Pagego) })
