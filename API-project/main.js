@@ -8,15 +8,10 @@ import './style.css'
  const page6 = "https://swapi.dev/api/people/?page=6"
  const page7 = "https://swapi.dev/api/people/?page7"
  const page8 = "https://swapi.dev/api/people/?page=8"
- const pageMAX = "https://swapi.dev/api/people/?page=9"
-/* mAYBE i cant make all the urls into a list and iterate over it with the async funstion to load all the data at once? */
-
-
+ const page9 = "https://swapi.dev/api/people/?page=9"
 const DOMselectors = {
   inside: document.getElementById("inside")
 }
-
-
 const DOMselectors2 = {
   Switch1: document.getElementById("page1"),
   Switch2: document.getElementById("page2"),
@@ -27,7 +22,6 @@ const DOMselectors2 = {
   Switch7: document.getElementById("page7"),
   Switch8: document.getElementById("page8"),
   Switch9: document.getElementById("page9"),
-
 }
   async function getdata(url) {
      try {
@@ -60,15 +54,18 @@ DOMselectors.inside.insertAdjacentHTML('beforeend' , infoholder)
  getdata(page6)
 
 
-DOMselectors2.forEach((Selector) => {Selector.addEventListener("click" , Pagego) })
-function Pagego() {
-  console.log("please wokr?")
+
+
+DOMselectors2.Switch1.addEventListener("click", poop)
+
+poop() {
+  console.log("test")
+  DOMselectors.inside.insertAdjacentHTML('beforeend' , "")
+  
 }
 
-
-
-
-
+ 
+  
 
 
 
