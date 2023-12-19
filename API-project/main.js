@@ -11,19 +11,20 @@ import './style.css'
  const page9 = "https://swapi.dev/api/people/?page=9"
 const DOMselectors = {
   inside: document.getElementById("inside")
-}
+  
+} 
 const DOMselectors2 = {
-  Switch1: document.getElementById("page1"),
-  Switch2: document.getElementById("page2"),
-  Switch3: document.getElementById("page3"),
-  Switch4: document.getElementById("page4"),
-  Switch5: document.getElementById("page5"),
-  Switch6: document.getElementById("page6"),
-  Switch7: document.getElementById("page7"),
-  Switch8: document.getElementById("page8"),
-  Switch9: document.getElementById("page9"),
+  S1 : document.getElementById("Page1"),
+  S2 :document.getElementById("Page2"),
+  S3 :document.getElementById("Page3"),
+  S4 :document.getElementById("Page4"),
+  S5 :document.getElementById("Page5"),
+  S6 :document.getElementById("Page6"),
+  S7  :document.getElementById("Page7"),
+  S8  :document.getElementById("Page8"),
+  S9 :document.getElementById("Page9"),
 }
-  async function getdata(url) {
+  async function getdata(url) { 
      try {
        const repsonce = await fetch(url); 
        if (repsonce.status != 200) {
@@ -36,7 +37,7 @@ const DOMselectors2 = {
       let z = card.eye_color
       let t = card.gender
       const infoholder =  `
-      <div id="CardFormant" class="CardTemplate">-
+      <div id="CardFormant" class="CardTemplate">
         <h2 class="personname">${x}</h2>
         <p>${z}</p>
         <p>${t}</p>
@@ -55,20 +56,11 @@ DOMselectors.inside.insertAdjacentHTML('beforeend' , infoholder)
 
 
 
+DOMselectors2.S5.addEventListener("click" ,poop )
+function poop(){
+  console.log("hi")
+ }
 
-DOMselectors2.Switch1.addEventListener("click", poop)
-
-poop() {
-  console.log("test")
-  DOMselectors.inside.insertAdjacentHTML('beforeend' , "")
-  
-}
-
- 
-  
-
-
-
-/*  i might poop my self if the code doesnt work*/
+/*  i am poop my self if the code doesnt work*/
 
 
