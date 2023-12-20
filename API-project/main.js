@@ -16,13 +16,6 @@ const DOMselectors = {
 const DOMselectors2 = {
   S1 : document.getElementById("Page1"),
   S2 :document.getElementById("Page2"),
-  S3 :document.getElementById("Page3"),
-  S4 :document.getElementById("Page4"),
-  S5 :document.getElementById("Page5"),
-  S6 :document.getElementById("Page6"),
-  S7  :document.getElementById("Page7"),
-  S8  :document.getElementById("Page8"),
-  S9 :document.getElementById("Page9"),
 }
   async function getdata(url) { 
      try {
@@ -56,11 +49,16 @@ DOMselectors.inside.insertAdjacentHTML('beforeend' , infoholder)
 
 
 
-DOMselectors2.S5.addEventListener("click" ,poop )
-function poop(){
-  console.log("hi")
- }
+DOMselectors2.S2.addEventListener("click" ,poop )
+function poop(){DOMselectors.inside.innerHTML = ''; getdata(page5)
 
+
+
+
+
+
+
+ 
 /*  i am poop my self if the code doesnt work*/
 
 /* Make the wesbite themed like the starwars archives on courscant. make the name of the site " The Archives" */
