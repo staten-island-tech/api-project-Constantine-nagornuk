@@ -61,4 +61,4 @@ function poop(){DOMselectors.inside.innerHTML = ''; getdata(page5)
  
 /*  i am poop my self if the code doesnt work*/
 
-/* Make the wesbite themed like the starwars archives on courscant. make the name of the site " The Archives" */
+
