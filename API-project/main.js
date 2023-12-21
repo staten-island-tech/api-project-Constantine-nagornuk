@@ -45,13 +45,23 @@ DOMselectors.inside.insertAdjacentHTML('beforeend' , infoholder)
     catch (error){
        error } } 
 
- getdata(page6)
+ getdata(page1)
 
 
+let pagenumber = 0
+
+
+
+DOMselectors2.S1.addEventListener("click" , poop1)
+function poop1(){
+console.log(--pagenumber)
+}
 
 DOMselectors2.S2.addEventListener("click" ,poop )
-function poop(){DOMselectors.inside.innerHTML = ''; getdata(page5)}
+function poop(){
+console.log(++pagenumber)
 
+}
 
 
 
