@@ -50,7 +50,7 @@ DOMselectors.inside.insertAdjacentHTML('beforeend' , infoholder)
 
 
 DOMselectors2.S2.addEventListener("click" ,poop )
-function poop(){DOMselectors.inside.innerHTML = ''; getdata(page5)
+function poop(){DOMselectors.inside.innerHTML = ''; getdata(page5)}
 
 
 
