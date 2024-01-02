@@ -52,16 +52,33 @@ let pagenumber = 0
 
 
 
+
 DOMselectors2.S1.addEventListener("click" , poop1)
 function poop1(){
 console.log(--pagenumber)
+if(pagenumber = 1){
+  pagenumber = 1
+
+}
 }
 
 DOMselectors2.S2.addEventListener("click" ,poop )
 function poop(){
 console.log(++pagenumber)
+if(pagenumber > 9) {
+  pagenumber = 9
+
+  // why the hell does it add 8 but the other one doesnt? only when i do pagenumber = 9 Now the minus counte ris broekn!
+}
+/* 
+if(pagenumber == 4) {
+  console.log("Workis")
+  DOMselectors.inside.innerHTML = '';
+  getdata(page4)
+} */
 
 }
+
 
 
 
