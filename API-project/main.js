@@ -24,11 +24,15 @@ const DOMselectors2 = {
          throw new Error(repsonce.statusText) 
         } 
     const data = await repsonce.json()
+    console.log(data)
     data.results.forEach((card)=>  {
       let x = card.name
       let y = card.birth_year
       let z = card.eye_color
       let t = card.gender
+      let pp = card.mass
+      let poop = card.skin_color
+      let Th = card . height
       const infoholder =  `
       <div id="CardFormant" class="CardTemplate">
         <h2 class="personname">${x}</h2>
@@ -36,6 +40,7 @@ const DOMselectors2 = {
         <p>${t}</p>
         <p>Mass</p>
         <p>${y}</p>
+        <p>${pp} KG</p>
     
     </div> 
 `
@@ -48,18 +53,47 @@ DOMselectors.inside.insertAdjacentHTML('beforeend' , infoholder)
  getdata(page1)
 
 
-let pagenumber = 0
-
+let pagenumber = 1
+function loadpages() {
+  if(pagenumber === 1) {
+    DOMselectors.inside.innerHTML = '';
+    getdata(page1)}
+    else if (pagenumber === 2) { 
+      DOMselectors.inside.innerHTML = '';
+      getdata(page2)}
+      else if (pagenumber === 3) { 
+        DOMselectors.inside.innerHTML = '';
+        getdata(page3)} 
+        else if (pagenumber === 4) { 
+          DOMselectors.inside.innerHTML = '';
+          getdata(page4)}
+          else if (pagenumber === 5) { 
+            DOMselectors.inside.innerHTML = '';
+            getdata(page5)}
+            else if (pagenumber === 6) { 
+              DOMselectors.inside.innerHTML = '';
+              getdata(page6)}
+              else if (pagenumber === 7) { 
+                DOMselectors.inside.innerHTML = '';
+                getdata(page7)}
+                else if (pagenumber === 8) { 
+                  DOMselectors.inside.innerHTML = '';
+                  getdata(page8)}
+                  else if (pagenumber === 9) { 
+                    DOMselectors.inside.innerHTML = '';
+                    getdata(page9)}
+                  }
+                   
 
 
 
 DOMselectors2.S1.addEventListener("click" , poop1)
 function poop1(){
 console.log(--pagenumber)
-if(pagenumber = 1){
+if(pagenumber < 1){
   pagenumber = 1
-
 }
+loadpages()
 }
 
 DOMselectors2.S2.addEventListener("click" ,poop )
@@ -67,17 +101,11 @@ function poop(){
 console.log(++pagenumber)
 if(pagenumber > 9) {
   pagenumber = 9
-
-  // why the hell does it add 8 but the other one doesnt? only when i do pagenumber = 9 Now the minus counte ris broekn!
 }
-/* 
-if(pagenumber == 4) {
-  console.log("Workis")
-  DOMselectors.inside.innerHTML = '';
-  getdata(page4)
-} */
-
+loadpages()
 }
+
+
 
 
 
@@ -88,6 +116,3 @@ if(pagenumber == 4) {
 
 
  
-/*  i am poop my self if the code doesnt work*/
-
-/* Make the wesbite themed like the starwars archives on courscant. make the name of the site " The Archives" */
