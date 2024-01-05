@@ -24,7 +24,6 @@ const DOMselectors2 = {
          throw new Error(repsonce.statusText) 
         } 
     const data = await repsonce.json()
-    console.log(data)
     data.results.forEach((card)=>  {
       let x = card.name
       let y = card.birth_year
@@ -32,15 +31,17 @@ const DOMselectors2 = {
       let t = card.gender
       let pp = card.mass
       let poop = card.skin_color
-      let Th = card . height
+      let Th = card.height
       const infoholder =  `
       <div id="CardFormant" class="CardTemplate">
         <h2 class="personname">${x}</h2>
-        <p>${z}</p>
-        <p>${t}</p>
-        <p>Mass</p>
-        <p>${y}</p>
-        <p>${pp} KG</p>
+        <p class="InsideText" >Eye color: ${z}</p>
+        <p class="InsideText"> Gender: ${t}</p>
+        <p class="InsideText">Weight: ${pp} KG</p>
+        <p class="InsideText">Date Of Birth: ${y}</p>
+        <p class="InsideText">Skin color: ${poop}</p>
+        <p class="InsideText">Height: ${Th} Centimeters</p>
+        
     
     </div> 
 `
