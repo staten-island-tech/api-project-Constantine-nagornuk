@@ -24,7 +24,7 @@
 }
 
 .personname{
-  color: #ffffff;
+  color: rgb(0, 0, 0);
 }
 
 .BACK{
@@ -83,6 +83,9 @@ font-size: 50px;
 
 
   .InsideText{
-   color: #000000
+   color: #ffffff
 
   }
+
+
+  /* css all done */
